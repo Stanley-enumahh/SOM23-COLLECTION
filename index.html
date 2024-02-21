@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./lightslider.css" />
+    <script type="text/javascript" src="./jquery.js"></script>
+    <script type="text/javascript" src="./lightslider.js"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <title>E-COMMERCE</title>
+  </head>
+  <body>
+    <section id="home" class="home-container">
+      <nav class="top-bar">
+        <div class="logo" data-aos="fade-right" data-aos-duration="1000">
+          Stop <span>n'shop</span>
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li>
+              <a href="#home" class="links">Home</a>
+            </li>
+            <li>
+              <a href="#new-arrivals" class="links">New arrivals</a>
+            </li>
+            <li>
+              <a href="#Offers" class="links">Offers</a>
+            </li>
+            <li>
+              <a href="#features" class="links">features</a>
+            </li>
+            <li>
+              <a href="#latest-blogs" class="links">Blog</a>
+            </li>
+          </ul>
+        </div>
+        <div class="top-bar-icons">
+          <ion-icon name="person" class="user-icon"></ion-icon>
+          <ion-icon name="cart" class="cart-icon"></ion-icon>
+          <ion-icon name="menu" class="menuBtn"></ion-icon>
+        </div>
+      </nav>
+
+      <!--banner-->
+      <div class="banner">
+        <div class="banner-left">
+          <p class="banner-text">Lorem ipsum dolor sit amet consectetur</p>
+          <h1 class="banner-title">Get Up to 30% Off New Arrivals</h1>
+          <button
+            class="banner-btn"
+            data-aos="fade-right"
+            data-aos-duration="800"
+            data-aos-delay="300"
+          >
+            Shop now
+          </button>
+        </div>
+
+        <div class="banner-right">
+          <img src="./banner.png" alt="Perfume image" />
+        </div>
+      </div>
+
+      <div class="scroll-up">
+        <a href="#home">
+          <button type="button" class="scroll-up-btn">
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </a>
+      </div>
+    </section>
+
+    <section class="new-arrivals">
+      <div class="new-arrivals-body">
+        <div id="new-arrivals">
+          <h2
+            class="new-arrivals-title"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
+            New Arrivals
+          </h2>
+        </div>
+        <div class="filter">
+          <ul>
+            <li>
+              <button type="button" class="filter-btn">All</button>
+            </li>
+            <li>
+              <button type="button" class="filter-btn">Women</button>
+            </li>
+            <li>
+              <button type="button" class="filter-btn">Accessories</button>
+            </li>
+            <li>
+              <button type="button" class="filter-btn">Men</button>
+            </li>
+          </ul>
+        </div>
+        <div class="items-slider">
+          <ul id="autoWidth" class="cs-hidden">
+            <li class="item-a">
+              <div class="box">
+                <div class="slider">
+                  <div class="overlay">
+                    <button type="button" class="buy-btn">ADD TO CART</button>
+                  </div>
+                  <img
+                    src="./brown suit.png"
+                    alt="Brown suit"
+                    class="item-image"
+                  />
+                </div>
+
+                <div class="item-details">
+                  <h4>Brown suit</h4>
+                  <span class="price">$1500</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="item-b">
+              <div class="box">
+                <div class="slider">
+                  <div class="overlay">
+                    <button type="button" class="buy-btn">ADD TO CART</button>
+                  </div>
+                  <img
+                    src="./whiteshirt.png"
+                    alt="Funcamp polo (white)"
+                    class="item-image"
+                  />
+                </div>
+
+                <div class="item-details">
+                  <h4>Funcamp polo (white)</h4>
+                  <span class="price">$25</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="item-c">
+              <div class="box">
+                <div class="slider">
+                  <div class="overlay">
+                    <button type="button" class="buy-btn">ADD TO CART</button>
+                  </div>
+                  <img
+                    src="./redbag.png"
+                    alt="Red handbag"
+                    class="item-image"
+                  />
+                </div>
+
+                <div class="item-details">
+                  <h4>Red handbag</h4>
+                  <span class="price">$45</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="item-d">
+              <div class="box">
+                <div class="slider">
+                  <div class="overlay">
+                    <button type="button" class="buy-btn">ADD TO CART</button>
+                  </div>
+                  <img src="./Nike1.png" alt="School bag" class="item-image" />
+                </div>
+
+                <div class="item-details">
+                  <h4>Nike (blue and white)</h4>
+                  <span class="price">$65</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="item-e">
+              <div class="box">
+                <div class="slider">
+                  <div class="overlay">
+                    <button type="button" class="buy-btn">ADD TO CART</button>
+                  </div>
+                  <img
+                    src="./blueshirt.png"
+                    alt="Simple tut (blue)"
+                    class="item-image"
+                  />
+                </div>
+
+                <div class="item-details">
+                  <h4>Simple tut (blue)</h4>
+                  <span class="price">$15</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="item-f">
+              <div class="box">
+                <div class="slider">
+                  <div class="overlay">
+                    <button type="button" class="buy-btn">ADD TO CART</button>
+                  </div>
+                  <img
+                    src="./nikeAir.png"
+                    alt="Nike-Air (white)"
+                    class="item-image"
+                  />
+                </div>
+
+                <div class="item-details">
+                  <h4>simple nike (white)</h4>
+                  <span class="price">$30</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="item-g">
+              <div class="box">
+                <div class="slider">
+                  <div class="overlay">
+                    <button type="button" class="buy-btn">ADD TO CART</button>
+                  </div>
+                  <img
+                    src="./black suit.png"
+                    alt="black suit"
+                    class="item-image"
+                  />
+                </div>
+
+                <div class="item-details">
+                  <h4>Black suit</h4>
+                  <span class="price">$800</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="item-h">
+              <div class="box">
+                <div class="slider">
+                  <div class="overlay">
+                    <button type="button" class="buy-btn">ADD TO CART</button>
+                  </div>
+                  <img
+                    src="./brown hang bag.png"
+                    alt="brown hang bag"
+                    class="item-image"
+                  />
+                </div>
+
+                <div class="item-details">
+                  <h4>brown hang bag</h4>
+                  <span class="price">$150</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="item-h">
+              <div class="box">
+                <div class="slider">
+                  <div class="overlay">
+                    <button type="button" class="buy-btn">ADD TO CART</button>
+                  </div>
+                  <img
+                    src="./cap.png"
+                    alt="Face cat (Grey)"
+                    class="item-image"
+                  />
+                </div>
+
+                <div class="item-details">
+                  <h4>Fcae cap (grey)</h4>
+                  <span class="price">$7</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="item-i">
+              <div class="box">
+                <div class="slider">
+                  <div class="overlay">
+                    <button type="button" class="buy-btn">ADD TO CART</button>
+                  </div>
+                  <img
+                    src="./white polo.png"
+                    alt="White shirt"
+                    class="item-image"
+                  />
+                </div>
+
+                <div class="item-details">
+                  <h4>White shirt</h4>
+                  <span class="price">$15</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="Offers" id="Offers">
+      <div class="offers-body">
+        <div class="deal-image">
+          <img src="./dealimg.png" alt="deal-image" />
+        </div>
+        <div class="deal-timer">
+          <div class="deal-title">
+            <h2>Deal of the week</h2>
+          </div>
+          <div class="deal-details">
+            <div class="deal-info days">
+              <h1>2</h1>
+              <span>Days</span>
+            </div>
+            <div class="deal-info hours">
+              <h1>24</h1>
+              <span>Hours</span>
+            </div>
+            <div class="deal-info minutes">
+              <h1>34</h1>
+              <span>Minutes</span>
+            </div>
+            <div class="deal-info seconds">
+              <h1>20</h1>
+              <span>Seconds</span>
+            </div>
+          </div>
+          <p class="expiry-text">sorry, the offer has expired!</p>
+          <button type="button" class="deal-btn">SHOP NOW</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="features-body">
+        <div class="features-single">
+          <i class="fa-solid fa-truck"></i>
+          <div class="features-info">
+            <h4>FREE DELIVERY</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur eu</p>
+          </div>
+        </div>
+
+        <div class="features-single">
+          <i class="fa-solid fa-money-bill"></i>
+          <div class="features-info">
+            <h4>CASH ON DELIVERY</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur</p>
+          </div>
+        </div>
+
+        <div class="features-single">
+          <i class="fa-solid fa-arrow-rotate-left"></i>
+          <div class="features-info">
+            <h4>45 DAYS RETURN</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur eudfywoy</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="latest-blogs" id="latest-blogs">
+      <div class="blog-title">
+        <h1>Latest Blogs</h1>
+      </div>
+      <div class="blogs-body">
+        <div class="blog-single">
+          <span class="blog-info">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+              dignissimos Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Nostrum odio quam id. Lorem ipsum dolor sit amet,
+            </p>
+          </span>
+          <div class="blog-img">
+            <img src="./wedding_789821_CS-3126.jpg" alt="man in blue suit" />
+          </div>
+        </div>
+
+        <div class="blog-single">
+          <span class="blog-info">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+              dignissimos Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Nostrum odio quam id. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Explicabo, quia! Cupiditate, fugiat.
+            </p>
+          </span>
+          <div class="blog-img">
+            <img src="./lady_72680_CS-8222.jpg" alt="man in blue suit" />
+          </div>
+        </div>
+
+        <div class="blog-single">
+          <span class="blog-info">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+              dignissimos Lorem ipsum dolor sit amet consectetur adipisicing
+              elit
+            </p>
+          </span>
+          <div class="blog-img">
+            <img src="./suit.jpg" alt="man in blue suit" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="newsletter-body">
+        <div class="newsletter-left">
+          <h2>Newsletter</h2>
+          <p>Subscribe to our newsletter and get 20% off your first</p>
+        </div>
+        <div class="newsletter-right">
+          <input type="text" id="subscribe" placeholder="Your email" />
+          <button type="button">subscribe</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="quick-access">
+      <div class="quick-access-body">
+        <div class="quick-select">
+          <ul>
+            <li>Blog</li>
+            <li>FAQs</li>
+            <li>Contact us</li>
+          </ul>
+        </div>
+
+        <div class="contact-btn-icons">
+          <span
+            ><a href="https://www.facebook.com/splendor.enumah">
+              <i class="fa-brands fa-facebook"></i
+            ></a>
+          </span>
+          <span
+            ><a
+              href="https://instagram.com/stanlee_create?utm_source=qr&igshid=OGU0MmVIOWVJOQ%3D%3D"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </span>
+          <span
+            ><a
+              href="https://twitter.com/StanLee53959205?t=P0NpBxDDaUC0MQIZh28y0Q&s=09"
+            >
+              <i class="fa-brands fa-twitter"></i
+            ></a>
+          </span>
+          <span
+            ><a href="https://github.com/Stanley-enumahh">
+              <i class="fa-brands fa-github"></i> </a
+          ></span>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        Copyrights &copy; stanlee designs <span id="date">2020</span> .all
+        rights reserved
+      </p>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script type="text/javascript" src="./script.js"></script>
+    <script src="./main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
