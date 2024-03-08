@@ -192,7 +192,7 @@
     justify-content: center;
     cursor: pointer;
     display: none;
-    z-index: 999;
+    z-index: 555;
     }
   .scroll-up-acive{
     display: flex;
@@ -1180,6 +1180,7 @@ footer{
     overflow: hidden;
     transition: .4s ease-in-out;
     background-color: #fff;
+    z-index: 999;
   }
   .cart-active{
     width: 35%;
@@ -1355,5 +1356,15 @@ footer{
   @media screen and (max-width:1024px){
     .cart-active{
       width: 40%;
+    }
+  }
+  @media screen and (max-width:768px){
+    .cart-active{
+      width: 50%;
+    }
+  }
+  @media screen and (max-width:500px){
+    .cart-active{
+      width: 100%;
     }
   }
