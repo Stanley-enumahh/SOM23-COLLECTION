@@ -11,12 +11,10 @@
       referrerpolicy="no-referrer"
     />
 
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./lightslider.css" />
-    <script type="text/javascript" src="./jquery.js"></script>
-    <script type="text/javascript" src="./lightslider.js"></script>
+    <script src="./main.js" defer></script>
+    <script src="./cart.js" async></script>
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
 
     <title>E-COMMERCE</title>
   </head>
@@ -24,7 +22,7 @@
     <section id="home" class="home-container">
       <nav class="top-bar">
         <div class="logo" data-aos="fade-right" data-aos-duration="1000">
-          Stop <span>n'shop</span>
+          Som <span>'23</span>
         </div>
         <div class="nav-links">
           <ul>
@@ -46,10 +44,36 @@
           </ul>
         </div>
         <div class="top-bar-icons">
-          <ion-icon name="person" class="user-icon"></ion-icon>
-          <ion-icon name="cart" class="cart-icon"></ion-icon>
+          <a href="user.html">
+            <ion-icon name="person" class="user-icon"></ion-icon
+          ></a>
+          <div class="cart-container">
+            <ion-icon name="cart" class="cart-icon"></ion-icon>
+            <span class="cart-count">0</span>
+          </div>
           <ion-icon name="menu" class="menuBtn"></ion-icon>
         </div>
+
+        <section class="cart">
+          <div class="cart-title">
+            <h2>Shopping cart</h2>
+          </div>
+          <div class="cart-body">
+            <div class="item-display">
+              </div>
+
+            <div class="payment-display">
+              <div class="total-price-display">
+                <span>Total price</span>
+                <span class="total-price">$0.00</span>
+              </div>
+              <div class="last-buttons">
+                <button type="button" class="purchase-btn">PURCHASE</button>
+                <button class="return-btn">return to shop</button>
+              </div>
+            </div>
+          </div>
+        </section>
       </nav>
 
       <!--banner-->
@@ -57,14 +81,16 @@
         <div class="banner-left">
           <p class="banner-text">Lorem ipsum dolor sit amet consectetur</p>
           <h1 class="banner-title">Get Up to 30% Off New Arrivals</h1>
-          <button
-            class="banner-btn"
-            data-aos="fade-right"
-            data-aos-duration="800"
-            data-aos-delay="300"
+          <a href="#new-arrivals">
+            <button
+              class="banner-btn"
+              data-aos="fade-right"
+              data-aos-duration="800"
+              data-aos-delay="300"
+            >
+              Shop now
+            </button></a
           >
-            Shop now
-          </button>
         </div>
 
         <div class="banner-right">
@@ -95,217 +121,30 @@
         <div class="filter">
           <ul>
             <li>
-              <button type="button" class="filter-btn">All</button>
+              <button data-id="All" type="button" class="filter-btn">
+                All
+              </button>
             </li>
             <li>
-              <button type="button" class="filter-btn">Women</button>
+              <button data-id="Women" type="button" class="filter-btn">
+                Women
+              </button>
             </li>
             <li>
-              <button type="button" class="filter-btn">Accessories</button>
+              <button data-id="Accessories" type="button" class="filter-btn">
+                Accessories
+              </button>
             </li>
             <li>
-              <button type="button" class="filter-btn">Men</button>
+              <button data-id="Men" type="button" class="filter-btn">
+                Men
+              </button>
             </li>
           </ul>
         </div>
         <div class="items-slider">
-          <ul id="autoWidth" class="cs-hidden">
-            <li class="item-a">
-              <div class="box">
-                <div class="slider">
-                  <div class="overlay">
-                    <button type="button" class="buy-btn">ADD TO CART</button>
-                  </div>
-                  <img
-                    src="./brown suit.png"
-                    alt="Brown suit"
-                    class="item-image"
-                  />
-                </div>
-
-                <div class="item-details">
-                  <h4>Brown suit</h4>
-                  <span class="price">$1500</span>
-                </div>
-              </div>
-            </li>
-
-            <li class="item-b">
-              <div class="box">
-                <div class="slider">
-                  <div class="overlay">
-                    <button type="button" class="buy-btn">ADD TO CART</button>
-                  </div>
-                  <img
-                    src="./whiteshirt.png"
-                    alt="Funcamp polo (white)"
-                    class="item-image"
-                  />
-                </div>
-
-                <div class="item-details">
-                  <h4>Funcamp polo (white)</h4>
-                  <span class="price">$25</span>
-                </div>
-              </div>
-            </li>
-
-            <li class="item-c">
-              <div class="box">
-                <div class="slider">
-                  <div class="overlay">
-                    <button type="button" class="buy-btn">ADD TO CART</button>
-                  </div>
-                  <img
-                    src="./redbag.png"
-                    alt="Red handbag"
-                    class="item-image"
-                  />
-                </div>
-
-                <div class="item-details">
-                  <h4>Red handbag</h4>
-                  <span class="price">$45</span>
-                </div>
-              </div>
-            </li>
-
-            <li class="item-d">
-              <div class="box">
-                <div class="slider">
-                  <div class="overlay">
-                    <button type="button" class="buy-btn">ADD TO CART</button>
-                  </div>
-                  <img src="./Nike1.png" alt="School bag" class="item-image" />
-                </div>
-
-                <div class="item-details">
-                  <h4>Nike (blue and white)</h4>
-                  <span class="price">$65</span>
-                </div>
-              </div>
-            </li>
-
-            <li class="item-e">
-              <div class="box">
-                <div class="slider">
-                  <div class="overlay">
-                    <button type="button" class="buy-btn">ADD TO CART</button>
-                  </div>
-                  <img
-                    src="./blueshirt.png"
-                    alt="Simple tut (blue)"
-                    class="item-image"
-                  />
-                </div>
-
-                <div class="item-details">
-                  <h4>Simple tut (blue)</h4>
-                  <span class="price">$15</span>
-                </div>
-              </div>
-            </li>
-
-            <li class="item-f">
-              <div class="box">
-                <div class="slider">
-                  <div class="overlay">
-                    <button type="button" class="buy-btn">ADD TO CART</button>
-                  </div>
-                  <img
-                    src="./nikeAir.png"
-                    alt="Nike-Air (white)"
-                    class="item-image"
-                  />
-                </div>
-
-                <div class="item-details">
-                  <h4>simple nike (white)</h4>
-                  <span class="price">$30</span>
-                </div>
-              </div>
-            </li>
-
-            <li class="item-g">
-              <div class="box">
-                <div class="slider">
-                  <div class="overlay">
-                    <button type="button" class="buy-btn">ADD TO CART</button>
-                  </div>
-                  <img
-                    src="./black suit.png"
-                    alt="black suit"
-                    class="item-image"
-                  />
-                </div>
-
-                <div class="item-details">
-                  <h4>Black suit</h4>
-                  <span class="price">$800</span>
-                </div>
-              </div>
-            </li>
-
-            <li class="item-h">
-              <div class="box">
-                <div class="slider">
-                  <div class="overlay">
-                    <button type="button" class="buy-btn">ADD TO CART</button>
-                  </div>
-                  <img
-                    src="./brown hang bag.png"
-                    alt="brown hang bag"
-                    class="item-image"
-                  />
-                </div>
-
-                <div class="item-details">
-                  <h4>brown hang bag</h4>
-                  <span class="price">$150</span>
-                </div>
-              </div>
-            </li>
-
-            <li class="item-h">
-              <div class="box">
-                <div class="slider">
-                  <div class="overlay">
-                    <button type="button" class="buy-btn">ADD TO CART</button>
-                  </div>
-                  <img
-                    src="./cap.png"
-                    alt="Face cat (Grey)"
-                    class="item-image"
-                  />
-                </div>
-
-                <div class="item-details">
-                  <h4>Fcae cap (grey)</h4>
-                  <span class="price">$7</span>
-                </div>
-              </div>
-            </li>
-
-            <li class="item-i">
-              <div class="box">
-                <div class="slider">
-                  <div class="overlay">
-                    <button type="button" class="buy-btn">ADD TO CART</button>
-                  </div>
-                  <img
-                    src="./white polo.png"
-                    alt="White shirt"
-                    class="item-image"
-                  />
-                </div>
-
-                <div class="item-details">
-                  <h4>White shirt</h4>
-                  <span class="price">$15</span>
-                </div>
-              </div>
-            </li>
-          </ul>
+  
+        </div>
         </div>
       </div>
     </section>
@@ -474,6 +313,31 @@
       </p>
     </footer>
 
+     <div class="items">
+  <div class="product">
+    <div class="product-img">
+      <img src="${itemImage}" alt="${title}" />
+    </div>
+    <div class="product-detail">
+      <p class="product-name">${title}</p>
+    </div>
+  </div>
+
+  <div class="product-qty-and-price">
+    <div class="product-qty">
+      <div class="product-qty">
+        <input type="number" class="Item-quantity" value="1" />
+      </div>
+    </div>
+    <div class="product-price">
+        <span class="perOne">${price}</span>   
+    </div>
+  </div>
+  <div class="remove">
+    <button type="button" class="remove-btn"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+</div>
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -482,11 +346,10 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <script type="text/javascript" src="./script.js"></script>
-    <script src="./main.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
+    <script src="./filter.js"></script>
   </body>
 </html>

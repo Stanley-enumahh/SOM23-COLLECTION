@@ -67,6 +67,7 @@ function getremainingTime() {
   });
 }
 
+
 let countdown = setInterval(getremainingTime, 1000);
 
 getremainingTime();
@@ -77,10 +78,33 @@ date.textContent = new Date().getFullYear();
 
 
 const scrollUp = document.querySelector('.scroll-up')
-window.addEventListener('scroll', function(){
+window.addEventListener('scroll', function () {
   const scrollHeight = window.pageYOffset
-  if(scrollHeight > 267){
+  if (scrollHeight > 267) {
     scrollUp.classList.add('scroll-up-acive')
   }
-  else(scrollUp.classList.remove('scroll-up-acive'))
+  else (scrollUp.classList.remove('scroll-up-acive'))
+})
+
+
+/*filter btns*/
+const itemsSlider = document.querySelector('.items-slider')
+const filterBtns = document.querySelectorAll('.filter-btn')
+const salesItems = document.querySelector('.box')
+
+
+/*cart*/
+
+const CartIcon = document.getElementsByClassName('cart-container')[0]
+const CartContainer = document.getElementsByClassName('cart')[0]
+const returnBtn = document.getElementsByClassName('return-btn')[0]
+
+CartIcon.addEventListener('click', function(){
+  CartContainer.classList.add('cart-active')
+  navLinks.classList.add('nav-links-active')
+})
+
+returnBtn.addEventListener('click', function(){
+  CartContainer.classList.remove('cart-active')
+  navLinks.classList.remove('nav-links-active')
 })
