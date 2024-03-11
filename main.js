@@ -102,10 +102,15 @@ const returnBtn = document.getElementsByClassName('return-btn')[0]
 CartIcon.addEventListener('click', function () {
   CartContainer.classList.add('cart-active')
   menuBtn.classList.add('menuBtn-activeee')
+  if(CartContainer.classList.contains('cart-active')){
+    navLinks.classList.remove('nav-links-active')
+  }
+ 
 })
 
 returnBtn.addEventListener('click', function () {
   CartContainer.classList.remove('cart-active')
   navLinks.classList.remove('nav-links-active')
   menuBtn.classList.remove('menuBtn-activeee')
+  menuBtn.name = "menu";
 })
