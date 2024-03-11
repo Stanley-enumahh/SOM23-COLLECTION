@@ -29,7 +29,7 @@ Links.forEach(function (links) {
 
 const dealInfo = document.querySelectorAll(".deal-info h1");
 
-const FutureDate = new Date(2024, 1, 28, 12, 30);
+const FutureDate = new Date(2024, 11, 25, 12, 30);
 const futureTime = FutureDate.getTime();
 
 function getremainingTime() {
@@ -99,12 +99,13 @@ const CartIcon = document.getElementsByClassName('cart-container')[0]
 const CartContainer = document.getElementsByClassName('cart')[0]
 const returnBtn = document.getElementsByClassName('return-btn')[0]
 
-CartIcon.addEventListener('click', function(){
+CartIcon.addEventListener('click', function () {
   CartContainer.classList.add('cart-active')
-  navLinks.classList.add('nav-links-active')
+  menuBtn.classList.add('menuBtn-activeee')
 })
 
-returnBtn.addEventListener('click', function(){
+returnBtn.addEventListener('click', function () {
   CartContainer.classList.remove('cart-active')
   navLinks.classList.remove('nav-links-active')
+  menuBtn.classList.remove('menuBtn-activeee')
 })

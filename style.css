@@ -87,6 +87,7 @@
   .menuBtn {
     display: none;
   }
+
 .user-icon{
   font-size: 1rem;
   padding: 10px;
@@ -281,10 +282,16 @@
       transition: 0.4s ease-in-out;
       background: #fff;
     }
+    .menuBtn-activeee{
+      display: none;
+    }
 
     .menuBtn:hover {
       border-radius: 50%;
       background: #ededed;
+    }
+    .banner-btn{
+      padding: 8px 8px;
     }
   }
   @media screen and (max-width:500px){
@@ -335,7 +342,6 @@
     .cart-count{
       height: 10px;
       width: 10px;
-      top: 17px;
     }
   }
 
@@ -1178,9 +1184,9 @@ footer{
     align-items: center;
     background-color: #ebebeb;
     overflow: hidden;
-    transition: .4s ease-in-out;
+    transition: .3s ease-in-out;
     background-color: #fff;
-    z-index: 999;
+    z-index: 888;
   }
   .cart-active{
     width: 35%;
@@ -1190,11 +1196,31 @@ footer{
     display: flex;
     flex-direction: column;
     width: 90%;
-    height: 80%;
+    height: 75%;
   }
-  .cart-title h2{
-    margin-top: 20px;
+  .cart-title{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+  }
+  .cart-title h4{
     font-size: 1rem;
+  }
+  .return-btn{
+    position: absolute;
+    right: 3%;
+    display: flex;
+    background: transparent;
+    color: #000;
+    border: 1px solid #343434;
+    cursor: pointer;
+    outline: none;
+    transition: .4s ease-in-out;
+    padding: 6px 8px;
+    border-radius: 50%;
   }
   .item-display{
     width: 100%;
@@ -1218,7 +1244,7 @@ footer{
     margin-top: 20px;
   }
   .product{
-    width: 40%;
+    width: 60%;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -1226,32 +1252,67 @@ footer{
     gap: 1rem;
   }
   .product-img{
-    width: 45%;
-    height: 100%;
+    width: 80px;
+    height: 85px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+    position: relative;
   }
-  .product img{
+
+  .item-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 80%;
+    height: 100%;
+    transition: .4s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .item-overlay i{
+    color: #fff;
+    padding:  6px 8px;
+    background-color: #e70e02;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .3s ease-in-out;
+  }
+  .product-img :hover.item-overlay{
+    background: rgba(239, 5, 5, 0.5);
+  }
+  .product-img :hover.item-overlay i{
+    opacity: 1;
+  }
+ 
+  .product img{
+    width: 90%;
+    height: 90%;
     object-fit: cover;
+  }
+  .product-detail{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
   }
   .product-detail p{
     font-size: .8rem;
-    line-height: 1.7rem;
   }
 
 .product-qty-and-price{
   display: flex;
   flex-direction: row;
-  gap: 1.5rem;
+  gap: .5rem;
+  align-items: center;
 }
 .product-qty{
   display: flex;
-  gap: .8rem;
+  gap: .7rem;
   justify-content: center;
   align-items: center;
 }
@@ -1264,37 +1325,39 @@ footer{
   border-radius: 4px;
   padding: 3px;
 }
-  .product-price{
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-  }
+
 .perOne{
   font-size: .8rem;
-  font-weight: bold;
+}
+.operate{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  color: #fff;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
   .remove-btn{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
+    padding: 4px 8px;
     border: none;
     outline: none;
     cursor: pointer;
     transition: .4s ease-in-out;
     background-color: #e70e02;
-  }
-  .remove-btn{
     color: #fff;
+    border-radius: 5px;
   }
+ 
 
   .remove-btn:hover{
-    background-color: #e70e02;
-    color: #fff;
-    border: none;
+   transform: scale(.9);
   }
 
   .payment-display{
@@ -1304,42 +1367,22 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    margin-top: 20px;
+    gap: .8rem;
+    margin-top: 10px;
   }
-  .last-buttons{
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .return-btn{
-    width: 45%;
-    background: #343434;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    transition: .4s ease-in-out;
-    padding: 10px 12px;
-    border-radius: 6px;
-  }
+
   .return-btn:hover{
    opacity: .8;
   }
   .total-price-display{
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-  .total-price{
-    font-weight: bold;
-  }
+
   .purchase-btn{
-    width: 45%;
+    width: 100%;
     background: #e70e02;
     color: #fff;
     border: none;
@@ -1359,12 +1402,68 @@ footer{
     }
   }
   @media screen and (max-width:768px){
+
     .cart-active{
       width: 50%;
     }
+    .cart-title{
+      height: 30px;
+     margin-bottom: 10px;
+    }
+    .item-display{
+      gap: 1.2rem;
+    }
+    .items{
+      margin-top: 0px;
+    }
+    .product-detail{
+      gap: .8rem;
+    }
+    .product-detail p{
+      font-size: .8rem;
+    }
+    .return-btn{
+      border: none;
+    }
+    .total-price{
+   font-size: .8rem;
+    }
+    .total-price-text{
+      font-size: .8rem;
+       }
   }
   @media screen and (max-width:500px){
     .cart-active{
       width: 100%;
+    }
+    .cart-title{
+      margin-top: 10px;
+    }
+    .cart-title h2{
+      font-size: .8rem;
+    }
+    .item-display{
+      height: 90%;
+    }
+    .product-img{
+      width: 80px;
+      height: 80px;
+    }
+
+  }
+  @media screen and (max-width:375px){
+    .product-img{
+      width: 80px;
+      height: 70px;
+    }
+    .product-img img{
+      width: 80%;
+      height: 80%;
+    }
+    .product-detail{
+      gap: .6rem;
+    }
+    .product-detail p{
+      font-size: .6rem;
     }
   }

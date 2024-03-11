@@ -12,7 +12,7 @@
     />
 
     <script src="./main.js" defer></script>
-    <script src="./cart.js" async></script>
+    
 
     <link rel="stylesheet" href="./style.css" />
 
@@ -22,7 +22,7 @@
     <section id="home" class="home-container">
       <nav class="top-bar">
         <div class="logo" data-aos="fade-right" data-aos-duration="1000">
-          Som <span>'23</span>
+          Som<span>'23 Collection</span>
         </div>
         <div class="nav-links">
           <ul>
@@ -56,21 +56,20 @@
 
         <section class="cart">
           <div class="cart-title">
-            <h2>Shopping cart</h2>
+            <h4>Your cart</h4>
+            <button class="return-btn"><i class="fa-solid fa-xmark"></i></button>
           </div>
           <div class="cart-body">
             <div class="item-display">
+             
               </div>
 
             <div class="payment-display">
               <div class="total-price-display">
-                <span>Total price</span>
+                <span class="total-price-text">Total price</span>
                 <span class="total-price">$0.00</span>
-              </div>
-              <div class="last-buttons">
-                <button type="button" class="purchase-btn">PURCHASE</button>
-                <button class="return-btn">return to shop</button>
-              </div>
+              </div>              
+                <button type="button" class="purchase-btn">Make purchase</button>                        
             </div>
           </div>
         </section>
@@ -325,6 +324,9 @@
     <script>
       AOS.init();
     </script>
-    <script src="./filter.js"></script>
+        <script src="./filter.js"></script>
+
+    <Script src="cart.js"></Script>
+    
   </body>
 </html>
